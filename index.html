@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+	<title>Document</title>
+	<link rel="stylesheet" href="swiper-3.4.2.min.css">
+	<link rel="stylesheet" href="base.css">
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.swiper-slide img{
+			width: 7.64rem;
+			height: 5.5rem;
+		}
+		.service{
+			height: 0.85rem;
+		}
+		.service>p{
+			line-height: 0.85rem;
+			font-size: 0.4rem;
+			font-weight: bold;
+			padding-left: 0.4rem;
+		}
+		.hr{
+			background-color: #dcdcdc;
+			height: 0.05rem;
+		}
+		.referral{
+			padding: 0 0.2rem;
+		}
+		.title{
+			width: 1.5rem;
+			margin-top: 0.2rem;
+			padding: 0.1rem 0.1rem;
+			background-color: #00b1bb;
+			color: #fff;
+			font-size: 0.36rem;
+		}
+		.content{
+			color: #5a5a5a;
+			font-size: 0.28rem;
+			line-height: 0.65rem;
+		}
+		.content>span{
+			color: #00b1bb
+		}
+		.address{
+			margin-top: 0.65rem;
+			font-size: 0.28rem;
+			
+		}
+		.time{
+			padding: 0 0.2rem;
+		}
+		.referral-content-title{
+			margin-top: 0.7rem;
+		}
+		.map{
+			margin-top: 0.15rem;
+			width: 7.5rem;
+			height: 4.3rem;
+		}
+		.fengexian{
+			height: 0.15rem;
+			background: #eaeaea;
+		}
+		.people{
+			list-style: none;
+		}
+		.people li{
+			border-bottom: 0.02rem solid #eaeaea;
+			padding: 0.3rem;
+			overflow: hidden;
+			background:  url(imgs/right.png) 6.8rem center no-repeat;
+			-webkit-background-size: 0.2rem 0.38rem;
+			background-size: 0.2rem 0.38rem;
+		}
+		#team>div{
+			margin-left: 0.2rem;
+		}
+		.left{
+			float: left;
+			width: 1.4rem;
+			height: 1.4rem;
+		}
+		.left>img{
+			width: 1.4rem;
+			height: 1.4rem;
+		}
+		.right{
+			float: right;
+			height: 1.4rem;
+			width: 5.1rem;
+		}
+		.team-title{
+			overflow: hidden;
+		}
+		.team-title>span:nth-of-type(1){
+			color: #00b1bb;
+			font-size: 0.36rem;
+			float: left;
+			vertical-align: middle;
+			margin-right: 0.25rem;
+		}
+		.team-title>span:nth-of-type(2){
+			color: #5a5a5a;
+			font-size: 0.28rem;
+			float: left;
+			margin-right: 0.2rem;
+			margin-top: 0.05rem;
+		}
+		.team-title>span:nth-of-type(3){
+			color: #5a5a5a;
+			font-size: 0.28rem;
+			margin-top: 0.05rem;
+			float: left;
+		}
+		.tag{
+			overflow: hidden;
+			margin-top: 0.2rem;
+		}
+		.tag>span{
+			float: left;
+			margin-right: 0.33rem;
+			padding: 0 0.3rem;
+			background-color: #f0f0f0;
+			color: #b7b7b7;
+			font-size: 0.24rem;
+		}
+		.tag>span:nth-of-type(4){
+			margin-top: 0.1rem;
+		}
+		.tag>span:nth-of-type(5){
+			margin-top: 0.1rem;
+		}
+		.tag>span:nth-of-type(6){
+			margin-top: 0.1rem;
+		}
+		#vip-food{
+			padding: 0 0.27rem;
+		}
+		.food>img{
+			width: 4.2rem;
+			height: 0.54rem;
+		}
+		.food>p{
+			font-size: 0.28rem;
+			color: #b7b7b7;
+			line-height: 0.55rem;
+		}
+		.food>p>span{
+			color: #00b1bb
+		}
+		.sun{
+			margin-top: 0.4rem;
+		}
+		.moon,.star{
+			margin-top: 0.7rem;
+		}
+		.question{
+			padding: 0 0.27rem;
+			font-size: 0.28rem;
+		}
+		.question>div:nth-of-type(2){
+			margin-top: 0.3rem;
+		}
+		.question>div:nth-of-type(3){
+			margin-top: 0.8rem;
+		}
+		.question>div:nth-of-type(4){
+			margin-top: 0.8rem;
+			margin-bottom: 1rem;
+		}
+		.ques{
+			color: #00b1bb;
+		}
+		.anse{
+			color: #b7b7b7;
+			line-height: 0.55rem;
+		}
+		.phone{
+			display: block;
+			width: 100%;
+			height: 0.9rem;
+			font-size: 0.48rem;
+			color: #fff;
+			line-height: 0.9rem;
+			text-align: center;
+			background-color: #00b1bb;
+			margin-top: 0.3rem;
+			position: fixed;
+			bottom: 0;
+		}
+		.title-li{
+			position: relative;
+		}
+		#title-li{
+			width: 100%;
+			position: fixed;
+			top: 0;
+		}
+		#title-li>li{
+			list-style: none;
+		    float: left;
+		    width: 33.33%;
+		    text-align: center;
+		    line-height: 1.4rem;
+		    font-size: 0.36rem;
+		    background-color: #fff;
+		    border-right: 1px solid #CCCCCC;
+		    border-bottom: 1px solid darkcyan;
+		    box-sizing: border-box;
+		}
+		#myli{
+			position: fixed;
+			border:5px solid transparent;
+			border-bottom-color:darkcyan;
+		}
+		.active{
+			color: darkcyan;
+		}
+	</style>
+</head>
+<body>
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="imgs/封面.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="imgs/封面.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="imgs/封面.jpg" alt=""></div>
+    </div>
+</div>
+<div class="service">
+	<p>纸杯儿科VIP挂号服务</p>
+</div>
+<div class="hr"></div>
+<div class="referral">
+	<div class="title">诊所介绍</div>
+	<p class="content">知贝儿科诊所是一家专注于儿童健康领域，为儿童提供现
+代循证医学（EBM）服务的专业医疗机构，拥有多位经验
+丰富、医术精湛的全职医生坐诊，服务范围涵盖了保健科、
+内科、皮肤科、耳鼻喉科等高需求科室。我们致力于把可
+靠的医疗服务，最佳的就医体验提供给家长和儿童，让就
+医成为一件温暖的小事。</p>
+	<p class="content referral-content-title">制备的服务</p>
+	<p class="content"><span>门诊服务:</span>儿童保健、新生儿专科、儿童呼吸专科、儿童
+心血管专科、儿童内分泌专科、儿童免疫专科、儿童肾脏
+专科、儿童神经专科、儿童耳鼻喉科、皮肤科</p>
+	<p class="address">广州市番禺区奥园城市天地9区15-20号
+（近维也纳公寓）</p>
+</div>
+<img src="imgs/map.jpg" alt="" class="map">
+<p  class="content time">门诊营业时间：<span>9：00-18：00</span></p>
+<p  class="content time">知贝儿科诊所目前只接受<span>电话预约</span></p>
+<div class="fengexian"></div>
+<!-- 医生团队 -->
+<div id="team">
+	<div class="title">医生团队</div>
+	<ul class="people">
+		<li>
+			<div class="left"><img src="imgs/未标题-1.png" alt=""></div>
+			<div class="right">
+				<div class="team-title">
+					<span>欧茜</span>
+					<span>儿内科医生</span>
+					<span>从医12年</span>
+				</div>
+				<div class="tag">
+					<span>咳嗽</span>
+					<span>发烧</span>
+					<span>腹泻</span>
+					<span>养育</span>
+					<span>胎记</span>
+					<span>湿疹</span>
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="left"><img src="imgs/未标题-1.png" alt=""></div>
+			<div class="right">
+				<div class="team-title">
+					<span>欧茜</span>
+					<span>儿内科医生</span>
+					<span>从医12年</span>
+				</div>
+				<div class="tag">
+					<span>咳嗽</span>
+					<span>发烧</span>
+					<span>腹泻</span>
+					<span>养育</span>
+					<span>胎记</span>
+					<span>湿疹</span>
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="left"><img src="imgs/未标题-1.png" alt=""></div>
+			<div class="right">
+				<div class="team-title">
+					<span>欧茜</span>
+					<span>儿内科医生</span>
+					<span>从医12年</span>
+				</div>
+				<div class="tag">
+					<span>咳嗽</span>
+					<span>发烧</span>
+					<span>腹泻</span>
+					<span>养育</span>
+					<span>胎记</span>
+					<span>湿疹</span>
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="left"><img src="imgs/未标题-1.png" alt=""></div>
+			<div class="right">
+				<div class="team-title">
+					<span>欧茜</span>
+					<span>儿内科医生</span>
+					<span>从医12年</span>
+				</div>
+				<div class="tag">
+					<span>咳嗽</span>
+					<span>发烧</span>
+					<span>腹泻</span>
+					<span>养育</span>
+					<span>胎记</span>
+					<span>湿疹</span>
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="left"><img src="imgs/未标题-1.png" alt=""></div>
+			<div class="right">
+				<div class="team-title">
+					<span>欧茜</span>
+					<span>儿内科医生</span>
+					<span>从医12年</span>
+				</div>
+				<div class="tag">
+					<span>咳嗽</span>
+					<span>发烧</span>
+					<span>腹泻</span>
+					<span>养育</span>
+					<span>胎记</span>
+					<span>湿疹</span>
+				</div>
+			</div>
+		</li>
+	</ul>
+</div>
+<div class="fengexian"></div>
+<!-- 会员套餐 -->
+<div id="vip-food">
+	<div class="title">会员套餐</div>
+	<div class="sun food clearfix">
+		<img src="imgs/1.png" alt="">
+		<p><span>就诊优惠</span>：门诊挂号7折，治疗费7折，检验费7折，线上
+服务7折</p>
+		<p><span>家庭医生服务</span>：专属宝宝管家服务pearl care，建立宝宝
+健康档案，建立宝宝病例方案终身保存和查询，医生小助
+手微信群管理服务</p>
+		<p><span>会员尊享</span>：知名三甲医疗机构绿色转诊服务1次，会员健
+康讲座，会员俱乐部定期活动，专家名家微课堂</p>
+	</div>
+	<div class="moon food clearfix">
+		<img src="imgs/2.png" alt="">
+		<p><span>就诊优惠</span>：门诊挂号8折，治疗费8折，检验费8折，线上
+服务8折</p>
+		<p><span>家庭医生服务</span>：专属宝宝管家服务，建立宝宝健康档案，
+建立宝宝病例方案终身保存和查询，医生小助手微信群管
+理服务</p>
+		<p><span>会员尊享</span>：知名三甲医疗机构绿色转诊服务1次，会员健
+康讲座，会员俱乐部定期活动，专家名家微课堂</p>
+	</div>
+	<div class="star food clearfix">
+		<img src="imgs/3.png" alt="">
+		<p><span>就诊优惠</span>：门诊挂号9折，治疗费9折，检验费9折，线上
+服务9折</p>
+		<p><span>家庭医生服务</span>：专属宝宝管家服务，建立宝宝健康档案，
+建立宝宝病例方案终身保存和查询，医生小助手微信群管
+理服务</p>
+	</div>
+</div>
+<div class="fengexian"></div>
+<div class="question">
+	<div class="title">常见问题</div>
+	<div class="qaa">
+		<p class="ques">Q：怎么预约？</p>
+		<p class="anse">A：拨打知贝儿科客服电话，提供您需要预约的时间以及
+家长姓名和宝宝姓名即可。</p>
+	</div>
+	<div class="qaa">
+		<p class="ques">Q：临时有事来不了怎么办？</p>
+		<p class="anse">A：拨打知贝儿科客服电话，告知客服取消预约/另约时间
+即可。</p>
+	</div>
+	<div class="qaa">
+		<p class="ques">Q：附近有停车场吗？</p>
+		<p class="anse">A：有的，奥园城市天地的停车位很充足，家长们不用担
+心找不到停车位。</p>
+	</div>
+</div>
+<a class="phone">电话预约</a>
+<div class="title-li">
+	<ul id="title-li">
+		<li>诊所介绍</li>
+		<li>医生团队</li>
+		<li>会员套餐</li>
+	</ul>
+	<div id="myli"></div>
+</div>
+<script type=text/javascript src="swiper-3.4.2.min.js"></script>
+<script type=text/javascript src="tween.js"></script>
+<script type=text/javascript>
+		(function (doc, win) {
+				
+		        var docEle = doc.documentElement,
+		                resizeEvent = 'orientationchange' in window ? 'orientationchange' : 'resize';
+		        var recalCulate = function () {
+		            var width = docEle.clientWidth;
+		            docEle.style.fontSize = 100 * (width / 750) + 'px';
+		        };
+		
+		        recalCulate();
+		
+		        if (!doc.addEventListener) return;
+		        win.addEventListener(resizeEvent, recalCulate, false);
+		    })(document, window);  
+		var mySwiper = new Swiper ('.swiper-container', {
+		direction: 'horizontal',
+		loop: true,
+		autoplay:1000,
+		})
+	</script>
+	<script type=text/javascript src="1.js"></script>
+</body>
+</html>
